@@ -14,5 +14,27 @@
 
 .logo {
     display: flex;
+    align-items: center;
     column-gap: 8px;
+}
+
+.logo img {
+    width: 35px;
+    height: 35px;
+}
+
+.logo h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    column-gap: 2.7rem;
+}
+
+.nav__item {
+    color: var(--primary-color);
 }
