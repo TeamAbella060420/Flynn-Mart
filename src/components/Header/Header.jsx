@@ -7,6 +7,8 @@ import userIcon from '../../assets/images/user-icon.png'
 
 import { NavLink } from "react-router-dom";
 
+import { motion } from 'framer-motion';
+
 const nav__links = [
     {
         path: 'home',
@@ -38,10 +40,14 @@ const Header = () => {
                             <div className="navigation">
                                 <ul className="menu">
                                     {
-                                        nav__links.map((item) => {
+                                        nav__links.map((item, index) => {
                                             return (
-                                            <li className="nav__item">
-                                            <NavLink to={item.path}>{item.display}</NavLink>
+                                            <li className="nav__item" key={index}>
+                                            <NavLink to={item.path} className={(navClass) =>
+                                                navClass.isActive ? 'nav__active': ''
+                                            }>
+                                                {item.display}
+                                            </NavLink>
                                             </li>
                                             )
                                         })
@@ -53,7 +59,9 @@ const Header = () => {
                                 <span className="fav__icon"><i class="ri-heart-line"></i></span>
                                 <span className="cart__icon"><i 
                                     class="ri-shopping-bag-line"></i></span>
-                                <span><img src={userIcon} alt="" /></span>
+                                <span>
+                                    <motion.img whileTap={{ scale: 1.2}} src={userIcon} alt="" />
+                                </span>
                             </div>
 
                             <div className="mobile__menu">
