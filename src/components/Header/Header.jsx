@@ -7,6 +7,21 @@ import userIcon from '../../assets/images/user-icon.png'
 
 import { NavLink } from "react-router-dom";
 
+const nav__links = [
+    {
+        path: 'home',
+        display: 'Home'
+    },
+    {
+        path: 'shop',
+        display: 'Shop'
+    },
+    {
+        path: 'cart',
+        display: 'Cart'
+    },
+]
+
 
 const Header = () => {
     return (
@@ -22,15 +37,15 @@ const Header = () => {
                         </div>
                             <div className="navigation">
                                 <ul className="menu">
-                                    <li className="nav__item">
-                                        <NavLink to='home'>Home</NavLink>
-                                    </li>
-                                    <li className="nav__item">
-                                        <NavLink to='home'>Shop</NavLink>
-                                    </li>
-                                    <li className="nav__item">
-                                        <NavLink to='home'>Cart</NavLink>
-                                    </li>
+                                    {
+                                        nav__links.map((item) => {
+                                            return (
+                                            <li className="nav__item">
+                                            <NavLink to={item.path}>{item.display}</NavLink>
+                                            </li>
+                                            )
+                                        })
+                                    }
                                 </ul>
                             </div>
 
