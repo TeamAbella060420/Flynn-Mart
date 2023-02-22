@@ -51,6 +51,7 @@
 .nav__icons span i {
     font-size: 1.3rem;
     color: var(--primary-color);
+    cursor: pointer;
 }
 
 .nav__icons span img{
@@ -61,4 +62,9 @@
 .mobile__menu {
     font-size: 1.3rem;
     color: var(--primary-color);
+    display: none;
+}
+
+.nav__active {
+    font-weight: 600;
 }
