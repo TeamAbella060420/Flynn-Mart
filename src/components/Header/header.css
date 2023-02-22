@@ -54,6 +54,10 @@
     cursor: pointer;
 }
 
+.cart__icon, .fav__icon {
+    position: relative;
+}
+
 .nav__icons span img{
     width: 30px;
     height: 30px;
