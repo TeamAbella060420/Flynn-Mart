@@ -4,6 +4,8 @@ import Helmet from "../components/Helmet/Helmet";
 import '../styles/home.css'
 
 import heroImg from '../assets/images/hero-img.png'
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Home = () => {
     const year = new Date().getFullYear()
@@ -18,7 +20,7 @@ const Home = () => {
                                 <h2>Make your interior More Minimalistic & Modern.</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In mollitia provident illum est? Voluptatibus delectus ducimus, obcaecati vitae rerum sapiente.</p>
                             </div>
-                            <button className="buy__btn">SHOP NOW</button>
+                            <motion.button whileTap={{scale: 1.2}} className="buy__btn"><Link to="/shop">SHOP NOW</Link></motion.button>
                         </Col>
 
                         <Col lg='6' md='6'>
