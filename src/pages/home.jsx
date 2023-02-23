@@ -20,7 +20,7 @@ const Home = () => {
                                 <h2>Make your interior More Minimalistic & Modern.</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In mollitia provident illum est? Voluptatibus delectus ducimus, obcaecati vitae rerum sapiente.</p>
                             </div>
-                            <motion.button whileTap={{scale: 1.2}} className="buy__btn"><Link to="/shop">SHOP NOW</Link></motion.button>
+                            <Link to="/shop"><motion.button whileTap={{scale: 1.2}} className="buy__btn">SHOP NOW</motion.button></Link>
                         </Col>
 
                         <Col lg='6' md='6'>
