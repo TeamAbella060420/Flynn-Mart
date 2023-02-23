@@ -13,10 +13,10 @@ const ProductCard = () => {
                 </div>
                 <div className="p-2">
                     <h3 className="product__name">Modern Armchair</h3>
-                    <span className="text-center d-block">Chair</span>
+                    <span>Chair</span>
                 </div>
                 <div className="product__card-bottom d-flex align-items-center
-                justify-content-between p-2">
+                justify-content-between p-2 product__info">
                     <span className="price">$299</span>
                     <span><i class="ri-add-box-line"></i></span>
                 </div>
