@@ -31,3 +31,11 @@
     font-size: 1rem;
     margin-top: 40px;
 }
+
+.buy__btn a:hover {
+    color: white;
+}
+
+.hero__section {
+    padding-top: 45px;
+}
