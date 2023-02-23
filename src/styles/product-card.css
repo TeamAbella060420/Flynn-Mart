@@ -12,4 +12,10 @@
 
 .product__card-bottom .price {
     color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.product__card-bottom span i {
+    font-size: 1.2rem;
 }
