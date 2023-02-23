@@ -1,8 +1,7 @@
-import { motion } from "framer-motion";
 import React from "react";
 import productImg from '../../assets/images/arm-chair-01.jpg'
 import '../../styles/product-card.css'
-import { Container, Col, Row } from "reactstrap";
+import { Col } from "reactstrap";
 
 const ProductCard = () => {
     return (
