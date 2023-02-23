@@ -1,0 +1,11 @@
+
+.product__info h3 {
+    font-style: 1.1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.product__info span {
+    font-style: 0.9rem;
+}
