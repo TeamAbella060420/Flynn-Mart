@@ -9,3 +9,7 @@
 .product__info span {
     font-style: 0.9rem;
 }
+
+.product__card-bottom .price {
+    color: var(--primary-color);
+}
