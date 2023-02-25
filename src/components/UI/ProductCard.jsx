@@ -2,6 +2,8 @@ import React from "react";
 import productImg from '../../assets/images/arm-chair-01.jpg'
 import '../../styles/product-card.css'
 import { Col } from "reactstrap";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const ProductCard = () => {
     return (
@@ -9,16 +11,16 @@ const ProductCard = () => {
         <Col lg='3' md='8'>
             <div className="product__item">
                 <div className="product__img">
-                    <img src={productImg} alt="" />
+                    <motion.img whileHover={{scale: 0.9}} src={productImg} alt="" />
                 </div>
                 <div className="p-2">
-                    <h3 className="product__name">Modern Armchair</h3>
+                    <h3 className="product__name"><Link to='/shop/id'>Modern Armchair</Link></h3>
                     <span>Chair</span>
                 </div>
                 <div className="product__card-bottom d-flex align-items-center
                 justify-content-between p-2 product__info">
                     <span className="price">$299</span>
-                    <span><i class="ri-add-box-line"></i></span>
+                    <motion.span whileTap={{scale: 1.2}}><i class="ri-add-line"></i></motion.span>
                 </div>
             </div>
         </Col>
