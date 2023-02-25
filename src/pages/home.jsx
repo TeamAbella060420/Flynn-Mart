@@ -75,6 +75,16 @@ const Home = () => {
                 </Container>
             </section>
 
+            <section className="timer__count">
+                <Container>
+                    <Row>
+                        <Col lg='6' md='6'>
+
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+
         </Helmet>
     )
 };
