@@ -10,12 +10,12 @@
     margin-top: 15px;
 }
 
-.product__info h3 {
+/* .product__info h3 {
     font-size: .9rem;
     color: var(--primary-color);
     font-weight: 600;
     margin-top: 15px;
-}
+} */
 
 .product__info span {
     font-size: 0.9rem;
