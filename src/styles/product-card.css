@@ -3,16 +3,22 @@
     cursor: pointer;
 }
 
+.product__name {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-top: 15px;
+}
 
 .product__info h3 {
-    font-style: 1.1rem;
+    font-size: .9rem;
     color: var(--primary-color);
     font-weight: 600;
     margin-top: 15px;
 }
 
 .product__info span {
-    font-style: 0.9rem;
+    font-size: 0.9rem;
 }
 
 .product__card-bottom .price {
