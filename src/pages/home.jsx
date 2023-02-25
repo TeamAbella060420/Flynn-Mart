@@ -12,6 +12,7 @@ import Sevices from "../services/Services";
 import ProductsList from "../components/UI/ProductsList";
 
 import counterImg from '../assets/images/counter-timer-img.png'
+import Clock from "../components/UI/Clock";
 
 const Home = () => {
     const [trendingProducts, setTrendingProducts] = useState([])
@@ -81,9 +82,15 @@ const Home = () => {
                 <Container>
                     <Row>
                         <Col lg='6' md='6'>
+                            <div className="clock__top-content">
+                                <h4 className="text-white fs-6">Limited Offer</h4>
+                                <h3>Quality Armchair</h3>
+                            </div>
+                            <Clock />
 
+                            <button className="buy__btn"><Link to='/shop'>Visit Store</Link></button>
                         </Col>
-                        <Col lg='6' md='6'>
+                        <Col lg='6' md='6' className="text-end">
                             <img src={counterImg} alt="" />
                         </Col>
                     </Row>
