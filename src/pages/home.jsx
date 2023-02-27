@@ -17,6 +17,8 @@ import Clock from "../components/UI/Clock";
 const Home = () => {
     const [trendingProducts, setTrendingProducts] = useState([])
     const [bestSaleProducts, setBestSaleProducts] = useState([])
+    const [mobileProducts, setMobileProducts] = useState([])
+    const [wirelesProducts, setWirelesProducts] = useState([])
     
     const year = new Date().getFullYear()
     useEffect(() => {
@@ -27,8 +29,18 @@ const Home = () => {
         const filteredBestSalesProducts = products.filter(
             item => item.category === 'sofa'
         );
+
+        const filteredMobileProducts = products.filter(
+            item => item.category === 'mobile'
+        );
+
+        const filteredWirelessProducts = products.filter(
+            item => item.category === 'wireless'
+        );
         setTrendingProducts(filteredTrendingProducts)
         setBestSaleProducts(filteredBestSalesProducts)
+        setMobileProducts(filteredMobileProducts)
+        setWirelesProducts(filteredWirelessProducts)
     }, []);
 
     return (
@@ -83,8 +95,8 @@ const Home = () => {
                     <Row>
                         <Col lg='6' md='6'>
                             <div className="clock__top-content">
-                                <h4 className="text-white fs-6">Limited Offer</h4>
-                                <h3 className="text-white fs-6">Quality Armchair</h3>
+                                <h4 className="text-white fs-6 mb-2">Limited Offer</h4>
+                                <h3 className="text-white fs-6 mb-3">Quality Armchair</h3>
                             </div>
                             <Clock />
 
@@ -95,6 +107,18 @@ const Home = () => {
                         <Col lg='6' md='6' className="text-end">
                             <img src={counterImg} alt="" />
                         </Col>
+                    </Row>
+                </Container>
+            </section>
+
+            <section className="new__arrivals">
+                <Container>
+                    <Row>
+                        <Col lg='12' className="text-center">
+                            <h2 className="section__title">New Arrivals</h2>
+                        </Col>
+                        <ProductsList data={mobileProducts}/>
+                        <ProductsList data={wirelesProducts}/>
                     </Row>
                 </Container>
             </section>
