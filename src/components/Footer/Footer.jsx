@@ -47,10 +47,52 @@ const Footer = () => {
                         </div>
                     </Col>
                     <Col lg='2'>
-
+                        <div className="footer__quick-links">
+                            <h4 className="quick__links-title">Useful Links</h4>
+                            <ListGroup className="mb-3">
+                                <ListGroupItem className="ps-0 border-0">
+                                    <Link to='/shop'>Shop</Link>
+                                </ListGroupItem>
+                            </ListGroup>
+                            <ListGroup>
+                                <ListGroupItem className="ps-0 border-0">
+                                    <Link to='/Cart'>Cart</Link>
+                                </ListGroupItem>
+                            </ListGroup>
+                            <ListGroup>
+                                <ListGroupItem className="ps-0 border-0">     
+                                    <Link to='/login'>Login</Link>
+                                </ListGroupItem>
+                            </ListGroup>
+                            <ListGroup>
+                                <ListGroupItem className="ps-0 border-0">
+                                    <Link to='#'>Privacy Policy</Link>
+                                </ListGroupItem>
+                            </ListGroup>
+                        </div>
                     </Col>
-                    <Col lg='1'>
-
+                    <Col lg='3'>
+                        <div className="footer__quick-links">
+                            <h4 className="quick__links-title">Contact</h4>
+                            <ListGroup className="mb-3">
+                                <ListGroupItem className="ps-0 border-0">
+                                    <span><i class="ri-map-pin-line"></i></span>
+                                    <p>123 Paranaque City</p>
+                                </ListGroupItem>
+                            </ListGroup>
+                            <ListGroup>
+                                <ListGroupItem className="ps-0 border-0">
+                                    <span><i class="ri-phone-line"></i></span>
+                                    <p>+63 927 263 2517</p>
+                                </ListGroupItem>
+                            </ListGroup>
+                            <ListGroup>
+                                <ListGroupItem className="ps-0 border-0">     
+                                    <span><i class="ri-mail-line"></i></span>
+                                    <p>teamabella@outlook.com</p>
+                                </ListGroupItem>
+                            </ListGroup>
+                        </div>
                     </Col>
                 </Row>
             </Container>
