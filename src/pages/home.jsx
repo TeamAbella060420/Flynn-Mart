@@ -84,11 +84,13 @@ const Home = () => {
                         <Col lg='6' md='6'>
                             <div className="clock__top-content">
                                 <h4 className="text-white fs-6">Limited Offer</h4>
-                                <h3>Quality Armchair</h3>
+                                <h3 className="text-white fs-6">Quality Armchair</h3>
                             </div>
                             <Clock />
 
-                            <button className="buy__btn"><Link to='/shop'>Visit Store</Link></button>
+                            <motion.button whileTap={{ scale: 1.2 }} className="buy__btn store__btn">
+                                <Link to='/shop'>Visit Store</Link>
+                            </motion.button>
                         </Col>
                         <Col lg='6' md='6' className="text-end">
                             <img src={counterImg} alt="" />
