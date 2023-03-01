@@ -80,13 +80,13 @@ const Footer = () => {
                                     <p>123 Paranaque City</p>
                                 </ListGroupItem>
                             </ListGroup>
-                            <ListGroup>
+                            <ListGroup className="footer__contact">
                                 <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-2">
                                     <span><i class="ri-phone-line"></i></span>
                                     <p>+63 927 263 2517</p>
                                 </ListGroupItem>
                             </ListGroup>
-                            <ListGroup>
+                            <ListGroup className="footer__contact">
                                 <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-2">     
                                     <span><i class="ri-mail-line"></i></span>
                                     <p>teamabella@outlook.com</p>
