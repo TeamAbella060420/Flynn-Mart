@@ -89,7 +89,9 @@ const Header = () => {
                             </div>
 
                             <div className="mobile__menu">
-                                <span><i class="ri-menu-line"></i></span>
+                                <span>
+                                    <i class="ri-menu-line"></i>
+                                </span>
                             </div>
                     </div>
                 </Row>
