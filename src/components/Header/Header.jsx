@@ -27,7 +27,9 @@ const nav__links = [
 
 const Header = () => {
 
-    const headerRef = useRef(null)
+    const headerRef = useRef(null);
+
+    const menuRef = useRef(null);
 
     const stickyHeaderFunc = () => {
         window.addEventListener('scroll', () => {
@@ -45,6 +47,8 @@ const Header = () => {
         return () => window.removeEventListener('scroll', stickyHeaderFunc)
     })
 
+    const menuToggle = () => menuRef.current.classList.toggle('active__menu')
+
     return (
         <header className="header" ref={headerRef}>
             <Container>
@@ -56,7 +60,7 @@ const Header = () => {
                                 <h1>FlyNNMart</h1>
                             </div>
                         </div>
-                            <div className="navigation">
+                            <div className="navigation" ref={menuRef} onClick={menuToggle}>
                                 <ul className="menu">
                                     {
                                         nav__links.map((item, index) => {
@@ -89,7 +93,7 @@ const Header = () => {
                             </div>
 
                             <div className="mobile__menu">
-                                <span>
+                                <span onClick={menuToggle}>
                                     <i class="ri-menu-line"></i>
                                 </span>
                             </div>
