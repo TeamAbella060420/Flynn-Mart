@@ -38,6 +38,7 @@
 
     .services__item h3 {
         font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -49,10 +50,6 @@
 } 
 
 @media only screen and (max-width: 768px) {
-    .services__item {
-        margin-bottom: 1.5rem;
-    }
-
     .services__item span i {
         font-size: 1.5rem;
         padding: 5px;
