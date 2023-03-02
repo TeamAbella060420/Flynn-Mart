@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import products from '../assets/data/products'
 
-import Sevices from "../services/Services";
+import Services from "../services/Services";
 import ProductsList from "../components/UI/ProductsList";
 
 import counterImg from '../assets/images/counter-timer-img.png'
@@ -18,7 +18,7 @@ const Home = () => {
     const [trendingProducts, setTrendingProducts] = useState([])
     const [bestSaleProducts, setBestSaleProducts] = useState([])
     const [mobileProducts, setMobileProducts] = useState([])
-    const [wirelesProducts, setWirelesProducts] = useState([])
+    const [wirelessProducts, setWirelessProducts] = useState([])
     const [popularProducts, setPopularProducts] = useState([])
     
     const year = new Date().getFullYear()
@@ -39,14 +39,14 @@ const Home = () => {
             item => item.category === 'wireless'
         );
 
-        const filterePopularProducts = products.filter(
+        const filteredPopularProducts = products.filter(
             item => item.category === 'watch'
         );
         setTrendingProducts(filteredTrendingProducts)
         setBestSaleProducts(filteredBestSalesProducts)
         setMobileProducts(filteredMobileProducts)
-        setWirelesProducts(filteredWirelessProducts)
-        setPopularProducts(filterePopularProducts)
+        setWirelessProducts(filteredWirelessProducts)
+        setPopularProducts(filteredPopularProducts)
     }, []);
 
     return (
@@ -72,7 +72,7 @@ const Home = () => {
                 </Container>
             </section>
 
-            <Sevices />
+            <Services />
 
             <section className="trending__products">
                 <Container>
@@ -124,7 +124,7 @@ const Home = () => {
                             <h2 className="section__title">New Arrivals</h2>
                         </Col>
                         <ProductsList data={mobileProducts}/>
-                        <ProductsList data={wirelesProducts}/>
+                        <ProductsList data={wirelessProducts}/>
                     </Row>
                 </Container>
             </section>
