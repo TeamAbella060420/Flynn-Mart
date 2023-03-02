@@ -65,7 +65,7 @@ const Home = () => {
 
                         <Col lg='6' md='6'>
                             <div className="hero__img">
-                                <img src={heroImg} alt="" /> // This is the image of a chair located in the center of the Home Page
+                                <img src={heroImg} alt="" /> 
                             </div>
                         </Col>
                     </Row>
@@ -135,7 +135,7 @@ const Home = () => {
                         <Col lg='12' className="text-center mb-5">
                             <h2 className="section__title">Popular in Category</h2>
                         </Col>
-                        <ProductsList data={popularProducts}/> // set of products watches 
+                        <ProductsList data={popularProducts}/>
                     </Row>
                 </Container>
             </section>
