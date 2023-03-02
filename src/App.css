@@ -69,7 +69,7 @@ section {
 }
 
 @media only screen and (max-width: 768px) {
-  .services__item {
-      padding: 20px;
+  section {
+    padding: 20px 0px;
   }
 }
