@@ -5,7 +5,7 @@ import './services.css'
 import servicesData from '../assets/data/serviceData'
 import { motion } from "framer-motion";
 
-const Sevices = () => {
+const Services = () => {
     return (
     <section className="services">
         <Container>
@@ -37,4 +37,4 @@ const Sevices = () => {
     )
 };
 
-export default Sevices;
+export default Services;
