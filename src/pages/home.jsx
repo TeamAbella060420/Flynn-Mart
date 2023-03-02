@@ -135,7 +135,7 @@ const Home = () => {
                         <Col lg='12' className="text-center mb-5">
                             <h2 className="section__title">Popular in Category</h2>
                         </Col>
-                        <ProductsList data={popularProducts}/>
+                        <ProductsList data={popularProducts}/> // set of products watches 
                     </Row>
                 </Container>
             </section>
