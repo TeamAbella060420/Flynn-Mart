@@ -5,7 +5,7 @@ const initialState = {
 
     cartItems: [],
     totalAmount: 0,
-    totalQuantity: 0
+    totalQuantity: []
 
 }
 
