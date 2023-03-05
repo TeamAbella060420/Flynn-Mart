@@ -23,8 +23,20 @@ const Shop = () => {
                             </select>
                         </Col>
                         <Col lg='3' md='3'>
+                             <div className="filter__widget"></div>
+                            <select>
+                                <option>Sort By</option>
+                                <option value="ascending">Ascending</option>
+                                <option value="descending">Descending</option>
+                            </select>
                         </Col>
                         <Col lg='6' md='6'>
+                            <div className="search__box">
+                                <input type="text" placeholder="Search....."/>
+                                <span>
+                                    <i class="ri-search-line"></i>
+                                </span>
+                            </div>
                         </Col>
                     </Row>
                 </Container>
