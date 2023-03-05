@@ -18,7 +18,7 @@ root.render(
       <ToastContainer
         theme="light"
         position="top-right"
-        autoClose={3000}
+        autoClose={1200}
         closeOnClick
         pauseOnFocusLoss
         draggable
