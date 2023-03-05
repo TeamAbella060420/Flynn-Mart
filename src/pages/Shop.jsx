@@ -14,7 +14,7 @@ const Shop = () => {
                 <Container>
                     <Row>
                         <Col lg='3' md='3'>
-                            <div className="filter__widget"></div>
+                            <div className="filter__widget">
                             <select>
                                 <option>Filter By Category</option>
                                 <option value="sofa">Sofa</option>
@@ -23,14 +23,16 @@ const Shop = () => {
                                 <option value="watch">Watch</option>
                                 <option value="wireless">Wireless</option>
                             </select>
+                            </div>
                         </Col>
                         <Col lg='3' md='3'>
-                             <div className="filter__widget"></div>
+                             <div className="filter__widget">
                             <select>
                                 <option>Sort By</option>
                                 <option value="ascending">Ascending</option>
                                 <option value="descending">Descending</option>
                             </select>
+                            </div>
                         </Col>
                         <Col lg='6' md='6'>
                             <div className="search__box">
