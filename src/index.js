@@ -23,6 +23,7 @@ root.render(
         pauseOnFocusLoss
         draggable
         pauseOnHover={false}
+        style={{marginTop: '50px'}}
       />
         <App />
       </Provider>
