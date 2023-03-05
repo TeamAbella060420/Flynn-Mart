@@ -10,10 +10,21 @@ const Shop = () => {
 
             <section>
                 <Container>
-                        <Row>
-                        <Col lg='3' md='4'>
+                    <Row>
+                        <Col lg='3' md='3'>
+                            <div className="filter__widget"></div>
+                            <select name="" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
                         </Col>
-                        </Row>
+                        <Col lg='3' md='3'>
+                        </Col>
+                        <Col lg='6' md='6'>
+                        </Col>
+                    </Row>
                 </Container>
             </section>
         </Helmet>
