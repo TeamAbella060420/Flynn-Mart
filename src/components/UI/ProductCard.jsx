@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../redux/slices/cartSlice";
 
+import { ToastContainer, toast } from 'react-toastify';
+
 const ProductCard = ({item}) => {
 
 const dispatch = useDispatch()
