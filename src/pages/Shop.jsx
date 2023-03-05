@@ -9,7 +9,12 @@ const Shop = () => {
             <CommonSection title='Products'/>
 
             <section>
-                
+                <Container>
+                        <Row>
+                        <Col lg='3' md='4'>
+                        </Col>
+                        </Row>
+                </Container>
             </section>
         </Helmet>
     )
