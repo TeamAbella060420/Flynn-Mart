@@ -2,7 +2,7 @@
 
 .common__section {
     background: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.562)),
-      no-repeat center center;
+     url('../assets/images/common-section.PNG') no-repeat center center;
     background-size: contain;
 }
 
