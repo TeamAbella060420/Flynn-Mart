@@ -22,7 +22,7 @@ const addTocart = () => {
     })
   );
 
- 
+    toast.success('Product added successfully')
 }
 
     return (
