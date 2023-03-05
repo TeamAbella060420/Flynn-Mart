@@ -3,6 +3,8 @@ import CommonSection from "../components/UI/CommonSection";
 import Helmet from '../components/Helmet/Helmet'
 import { Container,Row, Col } from "reactstrap";
 
+import '../styles/shop.css'
+
 const Shop = () => {
     return (
         <Helmet title='Shop'>
