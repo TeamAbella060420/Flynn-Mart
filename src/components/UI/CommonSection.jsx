@@ -1,12 +1,13 @@
 import React from 'react'
 import { Container } from 'reactstrap'
+import '../../styles/common-section.css'
 
 
-const CommonSection = () => {
+const CommonSection = ({title}) => {
   return (
     <section className="common__section">
-        <Container>
-            <h1></h1>
+        <Container className='text-center'>
+            <h1>{title}</h1>
         </Container>
     </section>
   )
