@@ -1,5 +1,13 @@
 
 .filter__widget select {
-    padding: 10px 20px;
-    border: 1px solid var(--primary-color)
+    padding: 8px 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.filter__widget select:focus {
+    
 }
