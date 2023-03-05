@@ -13,11 +13,13 @@ const Shop = () => {
                     <Row>
                         <Col lg='3' md='3'>
                             <div className="filter__widget"></div>
-                            <select name="" id="">
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
-                                <option value=""></option>
+                            <select>
+                                <option>Filter By Category</option>
+                                <option value="sofa">Sofa</option>
+                                <option value="mobile">Mobile</option>
+                                <option value="chair">Chair</option>
+                                <option value="watch">Watch</option>
+                                <option value="wireless">Wireless</option>
                             </select>
                         </Col>
                         <Col lg='3' md='3'>
