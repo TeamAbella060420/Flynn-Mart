@@ -22,7 +22,7 @@ const addTocart = () => {
     })
   );
 
-  alert('product added to the cart')
+ 
 }
 
     return (
