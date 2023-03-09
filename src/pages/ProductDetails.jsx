@@ -7,16 +7,23 @@ import CommonSection from "../components/UI/CommonSection";
 
 const ProductDetails = () => {
 
-    const { id } = useParams()
-    const product = products.find((item) => item.id === id)
+    const { id } = useParams();
+    const product = products.find((item) => item.id === id);
 
-    const { imgUrl, productName, price, avgRating, review, description} = product
+    const { 
+        imgUrl,
+        productName,
+        price,
+        avgRating,
+        review,
+        description,
+        shortDesc
+    } = product;
 
     return (
         <>
          <Helmet>
              <CommonSection />
-
              <section className="pt-0">
                  <Container>
                      <Row>
@@ -30,17 +37,26 @@ const ProductDetails = () => {
                                  </h2>
                                  <div className="product__rating">
                                      <div>
-                                         <span><i class="ri-star-s-fill"></i></span>
-                                         <span><i class="ri-star-s-fill"></i></span>
-                                         <span><i class="ri-star-s-fill"></i></span>
-                                         <span><i class="ri-star-s-fill"></i></span>
-                                         <span><i class="ri-star-half-s-line"></i></span>
-
+                                         <span>
+                                            <i className="ri-star-s-fill"></i>
+                                        </span>
+                                         <span>
+                                            <i className="ri-star-s-fill"></i>
+                                        </span>
+                                         <span>
+                                            <i className="ri-star-s-fill"></i>
+                                        </span>
+                                         <span>
+                                            <i className="ri-star-s-fill"></i>
+                                        </span>
+                                         <span>
+                                            <i className="ri-star-half-s-line"></i>
+                                        </span>
                                          <p>({avgRating} ratings)</p>
                                      </div>
 
                                      <span>{price}</span>
-                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dolor rerum quibusdam magnam incidunt similique, vitae asperiores animi laudantium facere.</p>
+                                     <p>{shortDesc}</p>
 
                                      <button className="buy__btn">Add to Cart</button>
 
@@ -51,7 +67,6 @@ const ProductDetails = () => {
                  </Container>
              </section>
          </Helmet>
-
         </>
     )
 };
