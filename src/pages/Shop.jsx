@@ -15,6 +15,34 @@ const Shop = () => {
             const filteredProducts = products.filter(item => item.category === 'sofa')
             setProductData(filteredProducts)
         }
+
+        if(filterValue === 'mobile') {
+            const filteredProducts = products.filter(item => item.category === 'mobile')
+            setProductData(filteredProducts)
+        }
+
+        if(filterValue === 'chair') {
+            const filteredProducts = products.filter(item => item.category === 'chair')
+            setProductData(filteredProducts)
+        }
+
+        if(filterValue === 'watch') {
+            const filteredProducts = products.filter(item => item.category === 'watch')
+            setProductData(filteredProducts)
+        }
+
+        if(filterValue === 'wireless') {
+            const filteredProducts = products.filter(item => item.category === 'wireless')
+            setProductData(filteredProducts)
+        }
+    }
+
+    const handleSearch = e => {
+        const searchItem = e.target.value
+
+        const searchedProducts = products.filter(item => item.productName.toLowerCase().includes(searchItem.toLowerCase()))
+
+        setProductData(searchedProducts)
     }
 
     return (
@@ -47,7 +75,11 @@ const Shop = () => {
                         </Col>
                         <Col lg='6' md='6'>
                             <div className="search__box">
-                                <input type="text" placeholder="Search....."/>
+                                <input 
+                                    type="text" 
+                                    placeholder="Search....." 
+                                    onChange={handleSearch}
+                                />
                                 <span>
                                     <i class="ri-search-line"></i>
                                 </span>
@@ -58,10 +90,10 @@ const Shop = () => {
             </section>
 
             <section>
-                <Container>
+                <Container className='pt-0'>
                     <Row>
                     {
-                        productsData.length === 0 ? <h1>No products are found!</h1>
+                        productsData.length === 0 ? <h1 className="text-center fs-4">No products are found!</h1>
                         : <ProductsList data={productsData} />
                     }
                     </Row>
