@@ -6,9 +6,9 @@ import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 
 const ProductDetails = () => {
-
+    console.log(products, 'sss');
     const { id } = useParams();
-    const product = products.find((item) => item.id === id);
+    const myproduct = products.find((item) => item.id === id);
 
     const { 
         imgUrl,
@@ -18,7 +18,7 @@ const ProductDetails = () => {
         review,
         description,
         shortDesc
-    } = product;
+    } = myproduct;
 
     return (
         <>
