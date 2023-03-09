@@ -33,7 +33,7 @@ const addTocart = () => {
                     <motion.img whileHover={{scale: 0.9}} src={item.imgUrl} alt="" />
                 </div>
                 <div className="p-2">
-                    <h3 className="product__name"><Link to='/shop/id'>{item.productName}</Link></h3>
+                    <h3 className="product__name"><Link to={`/shop/${item.id}`}>{item.productName}</Link></h3>
                     <span>{item.category}</span>
                 </div>
                 <div className="product__card-bottom d-flex align-items-center
