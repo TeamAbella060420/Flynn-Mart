@@ -18,7 +18,7 @@ const Clock = () => {
         interval = setInterval(() => {
             const now = new Date().getTime()
             const different = destination -  now
-            
+
             const days = Math.floor(different / (1000 * 60 * 60 * 24))
 
             const hours = Math.floor(different % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
@@ -27,7 +27,7 @@ const Clock = () => {
 
             const seconds = Math.floor(different % (1000 * 60) / (1000))
 
-            if(destination < 0) { 
+            if(destination < 0) {
                 clearInterval(interval.current)
             } else {
                 setDays(days)
