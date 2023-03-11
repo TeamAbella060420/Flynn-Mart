@@ -65,7 +65,7 @@ const Home = () => {
 
                         <Col lg='6' md='6'>
                             <div className="hero__img">
-                                <img src={heroImg} alt="" /> 
+                                <img src={heroImg} alt="" />
                             </div>
                         </Col>
                     </Row>
