@@ -35,7 +35,7 @@ const Footer = () => {
                                 </ListGroupItem>
                             </ListGroup>
                             <ListGroup>
-                                <ListGroupItem className="ps-0 border-0">     
+                                <ListGroupItem className="ps-0 border-0">
                                     <Link to='#'>Arm Chair</Link>
                                 </ListGroupItem>
                             </ListGroup>
@@ -60,7 +60,7 @@ const Footer = () => {
                                 </ListGroupItem>
                             </ListGroup>
                             <ListGroup>
-                                <ListGroupItem className="ps-0 border-0">     
+                                <ListGroupItem className="ps-0 border-0">
                                     <Link to='/login'>Login</Link>
                                 </ListGroupItem>
                             </ListGroup>
@@ -87,7 +87,7 @@ const Footer = () => {
                                 </ListGroupItem>
                             </ListGroup>
                             <ListGroup className="footer__contact">
-                                <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-2">     
+                                <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-2">
                                     <span><i class="ri-mail-line"></i></span>
                                     <p>teamabella@outlook.com</p>
                                 </ListGroupItem>
