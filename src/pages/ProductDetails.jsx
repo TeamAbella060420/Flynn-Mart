@@ -10,13 +10,11 @@ const ProductDetails = () => {
     const { id } = useParams();
     const myproduct = products.find((item) => item.id === id);
 
-    const { 
+    const {
         imgUrl,
         productName,
         price,
         avgRating,
-        review,
-        description,
         shortDesc
     } = myproduct;
 
