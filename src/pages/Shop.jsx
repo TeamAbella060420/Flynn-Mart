@@ -75,9 +75,9 @@ const Shop = () => {
                         </Col>
                         <Col lg='6' md='6'>
                             <div className="search__box">
-                                <input 
-                                    type="text" 
-                                    placeholder="Search....." 
+                                <input
+                                    type="text"
+                                    placeholder="Search....."
                                     onChange={handleSearch}
                                 />
                                 <span>
