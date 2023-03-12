@@ -22,3 +22,12 @@
     font-size: 1.3rem;
     font-weight: 500;
 }
+
+.tab__wrapper {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.active__tab {
+    font-weight: 600;
+}
