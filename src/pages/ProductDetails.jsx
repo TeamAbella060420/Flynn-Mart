@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 import products from "../assets/data/products";
@@ -8,7 +8,6 @@ import CommonSection from "../components/UI/CommonSection";
 import '../styles/product-details.css'
 
 const ProductDetails = () => {
-    console.log(products, 'sss');
     const { id } = useParams();
     const myproduct = products.find((item) => item.id === id);
 
@@ -77,7 +76,7 @@ const ProductDetails = () => {
                                 <h6>Reviews ({reviews.length})</h6>
                             </div>
 
-                            <div className="tab__content">
+                            <div className="tab__content mt-5">
                                 <p>{description}</p>
                             </div>
                         </Col>
