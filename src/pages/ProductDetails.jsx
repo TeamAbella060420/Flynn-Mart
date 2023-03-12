@@ -51,15 +51,14 @@ const ProductDetails = () => {
                                          <span>
                                             <i className="ri-star-half-s-line"></i>
                                         </span>
-                                         <p>({avgRating} ratings)</p>
                                      </div>
+                                         <p>(<span>{avgRating}</span> ratings)</p>
+                                 </div>
 
-                                     <span>{price}</span>
-                                     <p>{shortDesc}</p>
+                                     <span className="product__price">${price}</span>
+                                     <p className="mt-3">{shortDesc}</p>
 
                                      <button className="buy__btn">Add to Cart</button>
-
-                                 </div>
                              </div>
                          </Col>
                      </Row>
