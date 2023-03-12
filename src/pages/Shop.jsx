@@ -51,25 +51,25 @@ const Shop = () => {
 
             <section>
                 <Container>
-                    <Row>
+                    <Row >
                         <Col lg='3' md='3'>
-                            <div className="filter__widget">
-                            <select onChange={handleFilter}>
-                                <option>Filter By Category</option>
-                                <option value="sofa">Sofa</option>
-                                <option value="mobile">Mobile</option>
-                                <option value="chair">Chair</option>
-                                <option value="watch">Watch</option>
-                                <option value="wireless">Wireless</option>
-                            </select>
+                            <div className="filter__widget " >
+                                <select onChange={handleFilter}>
+                                    <option>Filter By Category</option>
+                                    <option value="sofa">Sofa</option>
+                                    <option value="mobile">Mobile</option>
+                                    <option value="chair">Chair</option>
+                                    <option value="watch">Watch</option>
+                                    <option value="wireless">Wireless</option>
+                                </select>
                             </div>
                             
-                             <div className="filter__widget">
-                            <select>
-                                <option>Sort By</option>
-                                <option value="ascending">Ascending</option>
-                                <option value="descending">Descending</option>
-                            </select>
+                             <div className="filter__widget mt-3">
+                                <select>
+                                    <option>Sort By</option>
+                                    <option value="ascending">Ascending</option>
+                                    <option value="descending">Descending</option>
+                                </select>
                             </div>
                         </Col>
                         <Col lg='6' md='6'>
