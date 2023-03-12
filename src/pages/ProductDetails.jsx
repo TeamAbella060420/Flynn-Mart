@@ -85,14 +85,15 @@ const ProductDetails = () => {
                                 tab === 'desc' ? 
                                 <div className="tab__content mt-5">
                                     <p>{description}</p>
-                                </div> : <div className="product__review">
+                                </div> : <div className="product__review mt-5">
                                     <div className="review__wrapper">
                                         <ul>
                                             {
-                                                reviews.map((item, index) => {
+                                                reviews?.map((item, index) => {
                                                     return (
-                                                        <li>
-                                                            <span>{item.rating}</span>
+                                                        <li key={index}>
+                                                            <span>{item.rating} (average rating)</span>
+                                                            <p>{item.text}</p>
                                                         </li>
                                                     )
                                                 })
