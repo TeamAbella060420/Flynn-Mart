@@ -8,6 +8,8 @@ import CommonSection from "../components/UI/CommonSection";
 import '../styles/product-details.css'
 
 const ProductDetails = () => {
+
+    const [tab, setTab] = useState('desc');
     const { id } = useParams();
     const myproduct = products.find((item) => item.id === id);
 
@@ -72,13 +74,19 @@ const ProductDetails = () => {
                     <Row>
                         <Col lg='12'>
                             <div className="tab__wrapper d-flex align-items-center gap-5">
-                                <h6>Description</h6>
-                                <h6>Reviews ({reviews.length})</h6>
+                                <h6 className={`${tab === 'desc' ? 'active__tab' : ''}`}
+                                    onClick={() => setTab('desc')}
+                                >Description</h6>
+                                <h6 className={`${tab === 'rev' ? 'active__tab' : ''}`}
+                                    onClick={() => setTab('rev')}
+                                >Reviews ({reviews.length})</h6>
                             </div>
-
-                            <div className="tab__content mt-5">
-                                <p>{description}</p>
-                            </div>
+                            {
+                                tab === 'desc' ? 
+                                <div className="tab__content mt-5">
+                                    <p>{description}</p>
+                                </div> : <div>reviews</div>
+                            }
                         </Col>
                     </Row>
                 </Container>
