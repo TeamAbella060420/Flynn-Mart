@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
@@ -58,7 +59,7 @@ const ProductDetails = () => {
                                      <span className="product__price">${price}</span>
                                      <p className="mt-3">{shortDesc}</p>
 
-                                     <button className="buy__btn">Add to Cart</button>
+                                     <motion.button whileTap={{ scale: 1.1 }} className="buy__btn">Add to Cart</motion.button>
                              </div>
                          </Col>
                      </Row>
