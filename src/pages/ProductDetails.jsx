@@ -91,7 +91,9 @@ const ProductDetails = () => {
                                             {
                                                 reviews?.map((item, index) => {
                                                     return (
-                                                        <li key={index}>
+                                                        <li key={index} className='mb-4'>
+
+                                                            <h6>John Doe</h6>
                                                             <span>{item.rating} (average rating)</span>
                                                             <p>{item.text}</p>
                                                         </li>
@@ -99,6 +101,14 @@ const ProductDetails = () => {
                                                 })
                                             }
                                         </ul>
+                                        
+                                        <div className="review__form">
+                                            <form action=''>
+                                                <div className="form__group">
+                                                    <input type="text" name="" id=""/>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             }
