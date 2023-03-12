@@ -4,6 +4,7 @@ import { Container, Row, Col } from "reactstrap";
 import products from "../assets/data/products";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
+import '../styles/product-details.css'
 
 const ProductDetails = () => {
     console.log(products, 'sss');
@@ -29,7 +30,7 @@ const ProductDetails = () => {
                              <img src={imgUrl} alt="" />
                          </Col>
                          <Col lg='6'>
-                             <div className="product__details">
+                             <div className="product__details d-flex align-items-center gap-5">
                                  <h2>
                                      {productName}
                                  </h2>
