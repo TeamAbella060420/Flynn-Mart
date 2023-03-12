@@ -18,7 +18,8 @@ const ProductDetails = () => {
         price,
         avgRating,
         shortDesc,
-        reviews
+        reviews,
+        description
     } = myproduct;
 
     return (
@@ -74,6 +75,10 @@ const ProductDetails = () => {
                             <div className="tab__wrapper d-flex align-items-center gap-5">
                                 <h6>Description</h6>
                                 <h6>Reviews ({reviews.length})</h6>
+                            </div>
+
+                            <div className="tab__content">
+                                <p>{description}</p>
                             </div>
                         </Col>
                     </Row>
