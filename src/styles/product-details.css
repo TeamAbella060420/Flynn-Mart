@@ -37,3 +37,7 @@
 .tab__content p {
     line-height: 30px;
 }
+
+.review__wrapper ul li span {
+    color: coral;
+}
