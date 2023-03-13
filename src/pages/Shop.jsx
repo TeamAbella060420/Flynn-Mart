@@ -53,7 +53,7 @@ const Shop = () => {
                 <Container>
                     <Row >
                         <Col lg='3' md='6'>
-                            <div className="filter__widget " >
+                            <div className="filter__widget" >
                                 <select onChange={handleFilter}>
                                     <option>Filter By Category</option>
                                     <option value="sofa">Sofa</option>
