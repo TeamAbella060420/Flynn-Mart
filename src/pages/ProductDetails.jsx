@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 import products from "../assets/data/products";
@@ -10,6 +10,9 @@ import '../styles/product-details.css'
 const ProductDetails = () => {
 
     const [tab, setTab] = useState('desc');
+    const reviewUser = useRef('')
+    const reviewMsg = useRef('')
+    const [rating, setRating] = useState(null)
     const { id } = useParams();
     const myproduct = products.find((item) => item.id === id);
 
@@ -20,8 +23,18 @@ const ProductDetails = () => {
         avgRating,
         shortDesc,
         reviews,
-        description
+        description,
+        category
     } = myproduct;
+
+    const relatedProducts = products.filter( item => item.category === category)
+
+    const submitHandler = (e) => {
+        e.preventDefault()
+
+        const reviewUserName = reviewUser.current.value
+        const reviewUserMsg = reviewMsg.current.value
+    }
 
     return (
         <>
@@ -40,19 +53,19 @@ const ProductDetails = () => {
                                  </h2>
                                  <div className="product__rating d-flex align-items-center gap-5 mb-3">
                                      <div>
-                                         <span>
+                                         <span onClick={() => setRating(1)}>
                                             <i className="ri-star-s-fill"></i>
                                         </span>
-                                         <span>
+                                         <span onClick={() => setRating(2)}>
                                             <i className="ri-star-s-fill"></i>
                                         </span>
-                                         <span>
+                                         <span onClick={() => setRating(3)}>
                                             <i className="ri-star-s-fill"></i>
                                         </span>
-                                         <span>
+                                         <span onClick={() => setRating(4)}>
                                             <i className="ri-star-s-fill"></i>
                                         </span>
-                                         <span>
+                                         <span onClick={() => setRating(5)}>
                                             <i className="ri-star-half-s-line"></i>
                                         </span>
                                      </div>
@@ -60,8 +73,8 @@ const ProductDetails = () => {
                                  </div>
 
                                      <span className="product__price">${price}</span>
+                                     <span> Category: {category.toUpperCase()}</span>
                                      <p className="mt-3">{shortDesc}</p>
-
                                      <motion.button whileTap={{ scale: 1.1 }} className="buy__btn">Add to Cart</motion.button>
                              </div>
                          </Col>
@@ -108,7 +121,7 @@ const ProductDetails = () => {
                                                     <input type="text" placeholder="Enter name"/>
                                                 </div>
 
-                                                <div className="form__group">
+                                                <div className="form__group d-flex align-items-center gap-5">
                                                     <span>1 <i class="ri-star-s-fill"></i></span>
                                                     <span>2 <i class="ri-star-s-fill"></i></span>
                                                     <span>3 <i class="ri-star-s-fill"></i></span>
@@ -117,8 +130,14 @@ const ProductDetails = () => {
                                                 </div>
 
                                                 <div className="form__group">
-                                                    <textarea rows={4} type="text" placeholder="Review Message..."/>
+                                                    <textarea
+                                                        rows={4}
+                                                        type="text"
+                                                        placeholder="Review Message..."
+                                                    />
                                                 </div>
+
+                                                <button type="submit" className="buy__btn">Submit</button>
                                             </form>
                                         </div>
                                     </div>
