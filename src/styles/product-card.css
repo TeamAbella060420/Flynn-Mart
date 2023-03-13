@@ -41,7 +41,7 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     .product__info h3 a {
         font-size: 1rem;
     }
@@ -49,4 +49,4 @@
     .product__card-bottom span i {
         font-size: 1rem;
     }
-}
+} */
