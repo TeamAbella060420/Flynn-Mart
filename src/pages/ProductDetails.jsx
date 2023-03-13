@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import React, { useState, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import { Container, Row, Col } from "reactstrap";
 import products from "../assets/data/products";
 import Helmet from "../components/Helmet/Helmet";
@@ -44,7 +45,9 @@ const ProductDetails = () => {
             image: imgUrl,
             productName,
             price
-        }))
+        }));
+
+        toast.success('Product added successfully')
     }
 
     return (
