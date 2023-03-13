@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import React, { useState, useRef } from "react";
+import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
 import products from "../assets/data/products";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
+import { cartActions } from "../redux/slices/cartSlice";
 import '../styles/product-details.css'
 
 const ProductDetails = () => {
@@ -117,7 +119,7 @@ const ProductDetails = () => {
                                             <h4>Leave your experience</h4>
                                             <form action='' onSubmit={submitHandler}>
                                                 <div className="form__group">
-                                                    <input type="text" placeholder="Enter name"/>
+                                                    <input type="text" placeholder="Enter name" ref={reviewUser}/>
                                                 </div>
 
                                                 <div className="form__group d-flex align-items-center gap-5">
@@ -133,6 +135,7 @@ const ProductDetails = () => {
                                                         rows={4}
                                                         type="text"
                                                         placeholder="Review Message..."
+                                                        ref={reviewMsg}
                                                     />
                                                 </div>
 
