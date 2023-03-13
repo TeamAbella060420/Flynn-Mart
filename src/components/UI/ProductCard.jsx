@@ -42,7 +42,7 @@ const addTocart = () => {
                         <motion.span whileTap={{scale: 1.2}} onClick={addTocart}><i class="ri-add-line"></i></motion.span>
                     </div>
                 </div>
-        </Col>
+            </Col>
         </>
     )
 };
