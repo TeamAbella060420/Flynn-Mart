@@ -82,7 +82,7 @@ const ProductDetails = () => {
                                 >Reviews ({reviews.length})</h6>
                             </div>
                             {
-                                tab === 'desc' ? 
+                                tab === 'desc' ?
                                 <div className="tab__content mt-5">
                                     <p>{description}</p>
                                 </div> : <div className="product__review mt-5">
@@ -101,7 +101,6 @@ const ProductDetails = () => {
                                                 })
                                             }
                                         </ul>
-                                        
                                         <div className="review__form">
                                             <form action=''>
                                                 <div className="form__group">
