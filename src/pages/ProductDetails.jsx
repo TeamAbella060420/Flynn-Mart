@@ -85,7 +85,8 @@ const ProductDetails = () => {
                                 tab === 'desc' ?
                                 <div className="tab__content mt-5">
                                     <p>{description}</p>
-                                </div> : <div className="product__review mt-5">
+                                </div> :
+                                <div className="product__review mt-5">
                                     <div className="review__wrapper">
                                         <ul>
                                             {
@@ -112,6 +113,10 @@ const ProductDetails = () => {
                                                     <span>3 <i class="ri-star-s-fill"></i></span>
                                                     <span>4 <i class="ri-star-s-fill"></i></span>
                                                     <span>5 <i class="ri-star-s-fill"></i></span>
+                                                </div>
+
+                                                <div className="form__group">
+                                                    <input type="text" placeholder="Review Message..."/>
                                                 </div>
                                             </form>
                                         </div>
