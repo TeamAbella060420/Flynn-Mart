@@ -103,7 +103,11 @@ const ProductDetails = () => {
                                         <div className="review__form">
                                             <form action=''>
                                                 <div className="form__group">
-                                                    <input type="text" name="" id=""/>
+                                                    <input type="text" placeholder="Enter name"/>
+                                                </div>
+
+                                                <div className="form__group">
+                                                    <span>1 <i class="ri-star-fill"></i></span>
                                                 </div>
                                             </form>
                                         </div>
