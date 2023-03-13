@@ -117,7 +117,7 @@ const ProductDetails = () => {
                                                 </div>
 
                                                 <div className="form__group">
-                                                    <input type="text" placeholder="Review Message..."/>
+                                                    <textarea row={4} type="text" placeholder="Review Message..."/>
                                                 </div>
                                             </form>
                                         </div>
