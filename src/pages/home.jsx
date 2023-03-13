@@ -20,7 +20,7 @@ const Home = () => {
     const [mobileProducts, setMobileProducts] = useState([])
     const [wirelessProducts, setWirelessProducts] = useState([])
     const [popularProducts, setPopularProducts] = useState([])
-    
+
     const year = new Date().getFullYear()
     useEffect(() => {
         const filteredTrendingProducts = products.filter(
