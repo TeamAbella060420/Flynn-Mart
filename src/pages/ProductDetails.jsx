@@ -12,9 +12,10 @@ import '../styles/product-details.css'
 const ProductDetails = () => {
 
     const [tab, setTab] = useState('desc');
-    const reviewUser = useRef('')
-    const reviewMsg = useRef('')
-    const [rating, setRating] = useState(null)
+    const reviewUser = useRef('');
+    const reviewMsg = useRef('');
+    const dispatch = useDispatch();
+    const [rating, setRating] = useState(null);
     const { id } = useParams();
     const myproduct = products.find((item) => item.id === id);
 
@@ -35,6 +36,15 @@ const ProductDetails = () => {
         e.preventDefault()
         const reviewUserName = reviewUser.current.value
         const reviewUserMsg = reviewMsg.current.value
+    }
+
+    const addToCart = () => {
+        dispatch(cartActions.addItem({
+            id,
+            image: imgUrl,
+            productName,
+            price
+        }))
     }
 
     return (
@@ -76,7 +86,12 @@ const ProductDetails = () => {
                                      <span className="product__price">${price}</span>
                                      <span> Category: {category.toUpperCase()}</span>
                                      <p className="mt-3">{shortDesc}</p>
-                                     <motion.button whileTap={{ scale: 1.1 }} className="buy__btn">Add to Cart</motion.button>
+                                     <motion.button
+                                      whileTap={{ scale: 1.1 }}
+                                      className="buy__btn"
+                                      onClick={addToCart}>
+                                        Add to Cart
+                                    </motion.button>
                              </div>
                          </Col>
                      </Row>
