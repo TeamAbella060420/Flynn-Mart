@@ -107,7 +107,11 @@ const ProductDetails = () => {
                                                 </div>
 
                                                 <div className="form__group">
-                                                    <span>1 <i class="ri-star-fill"></i></span>
+                                                    <span>1 <i class="ri-star-s-fill"></i></span>
+                                                    <span>2 <i class="ri-star-s-fill"></i></span>
+                                                    <span>3 <i class="ri-star-s-fill"></i></span>
+                                                    <span>4 <i class="ri-star-s-fill"></i></span>
+                                                    <span>5 <i class="ri-star-s-fill"></i></span>
                                                 </div>
                                             </form>
                                         </div>
