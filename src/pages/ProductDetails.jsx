@@ -31,7 +31,6 @@ const ProductDetails = () => {
 
     const submitHandler = (e) => {
         e.preventDefault()
-
         const reviewUserName = reviewUser.current.value
         const reviewUserMsg = reviewMsg.current.value
     }
@@ -116,7 +115,7 @@ const ProductDetails = () => {
                                         </ul>
                                         <div className="review__form">
                                             <h4>Leave your experience</h4>
-                                            <form action=''>
+                                            <form action='' onSubmit={submitHandler}>
                                                 <div className="form__group">
                                                     <input type="text" placeholder="Enter name"/>
                                                 </div>
