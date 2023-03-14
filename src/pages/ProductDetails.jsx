@@ -38,6 +38,8 @@ const ProductDetails = () => {
         e.preventDefault()
         const reviewUserName = reviewUser.current.value
         const reviewUserMsg = reviewMsg.current.value
+
+        console.log(reviewMsg, reviewUser, 'review');
     }
 
     const addToCart = () => {
