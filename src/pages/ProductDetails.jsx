@@ -75,19 +75,19 @@ const ProductDetails = () => {
                                  </h2>
                                  <div className="product__rating d-flex align-items-center gap-5 mb-3">
                                      <div>
-                                         <span onClick={() => setRating(1)}>
+                                         <span>
                                             <i className="ri-star-s-fill"></i>
                                         </span>
-                                         <span onClick={() => setRating(2)}>
+                                         <span>
                                             <i className="ri-star-s-fill"></i>
                                         </span>
-                                         <span onClick={() => setRating(3)}>
+                                         <span>
                                             <i className="ri-star-s-fill"></i>
                                         </span>
-                                         <span onClick={() => setRating(4)}>
+                                         <span>
                                             <i className="ri-star-s-fill"></i>
                                         </span>
-                                         <span onClick={() => setRating(5)}>
+                                         <span>
                                             <i className="ri-star-half-s-line"></i>
                                         </span>
                                      </div>
@@ -149,7 +149,14 @@ const ProductDetails = () => {
                                                     <input type="text" placeholder="Enter name" ref={reviewUser}/>
                                                 </div>
 
-                                                <div className="form__group d-flex align-items-center gap-5 rating__group">
+                                                <div
+                                                 className="
+                                                    form__group
+                                                    d-flex
+                                                    align-items-center
+                                                    gap-5
+                                                    rating__group"
+                                                >
                                                     <span>1 <i class="ri-star-s-fill"></i></span>
                                                     <span>2 <i class="ri-star-s-fill"></i></span>
                                                     <span>3 <i class="ri-star-s-fill"></i></span>
