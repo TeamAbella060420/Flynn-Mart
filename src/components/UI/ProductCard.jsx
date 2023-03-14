@@ -38,7 +38,7 @@ const addTocart = () => {
                     </div>
                     <div className="product__card-bottom d-flex align-items-center
                     justify-content-between p-2 product__info">
-                        <span className="price">${item.price}</span>
+                        <p className="price">${item.price}</p>
                         <motion.span whileTap={{scale: 1.2}} onClick={addTocart}><i class="ri-add-line"></i></motion.span>
                     </div>
                 </div>
