@@ -46,7 +46,8 @@ const ProductDetails = () => {
             image: imgUrl,
             productName,
             price
-        }));
+        })
+        );
 
         toast.success('Product added successfully')
     };
@@ -90,9 +91,10 @@ const ProductDetails = () => {
                                      </div>
                                          <p>(<span>{avgRating}</span> ratings)</p>
                                  </div>
-
-                                     <span className="product__price">${price}</span>
-                                     <span> Category: {category.toUpperCase()}</span>
+                                    <div className="d-flex align-items-center gap-5">
+                                        <span className="product__price">${price}</span>
+                                        <span> Category: {category.toUpperCase()}</span>
+                                    </div>
                                      <p className="mt-3">{shortDesc}</p>
                                      <motion.button
                                       whileTap={{ scale: 1.1 }}
