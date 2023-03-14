@@ -157,11 +157,11 @@ const ProductDetails = () => {
                                                     gap-5
                                                     rating__group"
                                                 >
-                                                    <span>1 <i class="ri-star-s-fill"></i></span>
-                                                    <span>2 <i class="ri-star-s-fill"></i></span>
-                                                    <span>3 <i class="ri-star-s-fill"></i></span>
-                                                    <span>4 <i class="ri-star-s-fill"></i></span>
-                                                    <span>5 <i class="ri-star-s-fill"></i></span>
+                                                    <span onClick={() => setRating(1)}>1 <i class="ri-star-s-fill"></i></span>
+                                                    <span onClick={() => setRating(2)}>2 <i class="ri-star-s-fill"></i></span>
+                                                    <span onClick={() => setRating(3)}>3 <i class="ri-star-s-fill"></i></span>
+                                                    <span onClick={() => setRating(4)}>4 <i class="ri-star-s-fill"></i></span>
+                                                    <span onClick={() => setRating(5)}>5 <i class="ri-star-s-fill"></i></span>
                                                 </div>
 
                                                 <div className="form__group">
