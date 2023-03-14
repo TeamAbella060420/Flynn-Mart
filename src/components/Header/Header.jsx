@@ -92,12 +92,11 @@ const Header = () => {
                                 <span>
                                     <motion.img whileTap={{ scale: 1.2}} src={userIcon} alt="" />
                                 </span>
-                            </div>
-
-                            <div className="mobile__menu">
-                                <span onClick={menuToggle}>
-                                    <i class="ri-menu-line"></i>
-                                </span>
+                                <div className="mobile__menu">
+                                    <span onClick={menuToggle}>
+                                        <i class="ri-menu-line"></i>
+                                    </span>
+                                </div>
                             </div>
                     </div>
                 </Row>
