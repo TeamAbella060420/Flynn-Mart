@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -7,6 +7,7 @@ import { Container, Row, Col } from "reactstrap";
 import products from "../assets/data/products";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
+import ProductsList from "../components/UI/ProductsList";
 import { cartActions } from "../redux/slices/cartSlice";
 import '../styles/product-details.css'
 
@@ -48,7 +49,11 @@ const ProductDetails = () => {
         }));
 
         toast.success('Product added successfully')
-    }
+    };
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, [products]);
 
     return (
         <>
@@ -164,6 +169,12 @@ const ProductDetails = () => {
                                 </div>
                             }
                         </Col>
+
+                        <Col>
+                            <h2 className="related__title">You might also like</h2>
+                        </Col>
+
+                        <ProductsList data={relatedProducts}/>
                     </Row>
                 </Container>
              </section>
