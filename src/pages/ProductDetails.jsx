@@ -43,7 +43,7 @@ const ProductDetails = () => {
             userName: reviewUserName,
             text: reviewUserMsg,
             rating
-        }
+        };
 
         console.log(reviewObj, 'review');
     }
@@ -163,11 +163,11 @@ const ProductDetails = () => {
                                                     gap-5
                                                     rating__group"
                                                 >
-                                                    <span onClick={() => setRating(1)}>1 <i class="ri-star-s-fill"></i></span>
-                                                    <span onClick={() => setRating(2)}>2 <i class="ri-star-s-fill"></i></span>
-                                                    <span onClick={() => setRating(3)}>3 <i class="ri-star-s-fill"></i></span>
-                                                    <span onClick={() => setRating(4)}>4 <i class="ri-star-s-fill"></i></span>
-                                                    <span onClick={() => setRating(5)}>5 <i class="ri-star-s-fill"></i></span>
+                                                    <motion.span onClick={() => setRating(1)}>1 <i class="ri-star-s-fill"></i></motion.span>
+                                                    <motion.span onClick={() => setRating(2)}>2 <i class="ri-star-s-fill"></i></motion.span>
+                                                    <motion.span onClick={() => setRating(3)}>3 <i class="ri-star-s-fill"></i></motion.span>
+                                                    <motion.span onClick={() => setRating(4)}>4 <i class="ri-star-s-fill"></i></motion.span>
+                                                    <motion.span onClick={() => setRating(5)}>5 <i class="ri-star-s-fill"></i></motion.span>
                                                 </div>
 
                                                 <div className="form__group">
