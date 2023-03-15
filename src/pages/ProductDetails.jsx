@@ -46,6 +46,8 @@ const ProductDetails = () => {
         };
 
         console.log(reviewObj, 'review');
+        toast.success('Review Submitted')
+
     }
 
     const addToCart = () => {
@@ -152,7 +154,12 @@ const ProductDetails = () => {
                                             <h4>Leave your experience</h4>
                                             <form action='' onSubmit={submitHandler}>
                                                 <div className="form__group">
-                                                    <input type="text" placeholder="Enter name" ref={reviewUser}/>
+                                                    <input
+                                                        type="text"
+                                                        placeholder="Enter name"
+                                                        ref={reviewUser}
+                                                        required
+                                                    />
                                                 </div>
 
                                                 <div
@@ -163,11 +170,11 @@ const ProductDetails = () => {
                                                     gap-5
                                                     rating__group"
                                                 >
-                                                    <motion.span onClick={() => setRating(1)}>1 <i class="ri-star-s-fill"></i></motion.span>
-                                                    <motion.span onClick={() => setRating(2)}>2 <i class="ri-star-s-fill"></i></motion.span>
-                                                    <motion.span onClick={() => setRating(3)}>3 <i class="ri-star-s-fill"></i></motion.span>
-                                                    <motion.span onClick={() => setRating(4)}>4 <i class="ri-star-s-fill"></i></motion.span>
-                                                    <motion.span onClick={() => setRating(5)}>5 <i class="ri-star-s-fill"></i></motion.span>
+                                                    <motion.span whileTap={{scale: 1.2}} onClick={() => setRating(1)}>1 <i class="ri-star-s-fill"></i></motion.span>
+                                                    <motion.span whileTap={{scale: 1.2}} onClick={() => setRating(2)}>2 <i class="ri-star-s-fill"></i></motion.span>
+                                                    <motion.span whileTap={{scale: 1.2}} onClick={() => setRating(3)}>3 <i class="ri-star-s-fill"></i></motion.span>
+                                                    <motion.span whileTap={{scale: 1.2}} onClick={() => setRating(4)}>4 <i class="ri-star-s-fill"></i></motion.span>
+                                                    <motion.span whileTap={{scale: 1.2}} onClick={() => setRating(5)}>5 <i class="ri-star-s-fill"></i></motion.span>
                                                 </div>
 
                                                 <div className="form__group">
@@ -176,10 +183,11 @@ const ProductDetails = () => {
                                                         type="text"
                                                         placeholder="Review Message..."
                                                         ref={reviewMsg}
+                                                        required
                                                     />
                                                 </div>
 
-                                                <button type="submit" className="buy__btn">Submit</button>
+                                                <motion.button whileTap={{scale: 1.2}} type="submit" className="buy__btn">Submit</motion.button>
                                             </form>
                                         </div>
                                     </div>
