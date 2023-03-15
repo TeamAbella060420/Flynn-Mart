@@ -39,7 +39,13 @@ const ProductDetails = () => {
         const reviewUserName = reviewUser.current.value
         const reviewUserMsg = reviewMsg.current.value
 
-        console.log(reviewUserMsg, reviewUserName, rating);
+        const reviewObj = {
+            userName: reviewUserName,
+            text: reviewUserMsg,
+            rating
+        }
+
+        console.log(reviewObj, 'review');
     }
 
     const addToCart = () => {
