@@ -32,13 +32,17 @@ const Cart = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td><img src={tdImg} alt="" /></td>
-                                        <td>Modern Arm Chair</td>
-                                        <td>$299</td>
-                                        <td>2px </td>
-                                        <td><i class="ri-delete-bin-6-line"></i></td>
-                                    </tr>
+                                    {
+                                        cartItems.map((item,index) => {
+                                            <tr>
+                                            <td><img src={item.image} alt="" /></td>
+                                            <td>{item.productName}</td>
+                                            <td>${item.price}</td>
+                                            <td>{item.quantity} pc </td>
+                                            <td><i class="ri-delete-bin-6-line"></i></td>
+                                        </tr>
+                                        })
+                                    }
                                 </tbody>
                             </table>
                             }
