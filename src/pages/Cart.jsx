@@ -24,11 +24,11 @@ const Cart = () => {
                                 <table className="table bordered">
                                 <thead>
                                     <tr>
-                                        <th>Image</th>
+                                        <th className="text-center">Image</th>
                                         <th>Title</th>
-                                        <th>Price</th>
-                                        <th>Qty</th>
-                                        <th>Delete</th>
+                                        <th className="text-center">Price</th>
+                                        <th className="text-center">Qty</th>
+                                        <th className="text-center">Delete</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -73,11 +73,11 @@ const Tr = ({item, index}) => {
     }
     return (
         <tr key={index}>
-            <td><img src={item.imgUrl} alt="" /></td>
+            <td className="text-center"><img src={item.imgUrl} alt="" /></td>
             <td>{item.productName}</td>
-            <td>${item.price}</td>
-            <td>{item.quantity} pc </td>
-            <td>
+            <td className="text-center">${item.price}</td>
+            <td className="text-center">{item.quantity} pc </td>
+            <td className="text-center">
                 <motion.i
                     whileTap={{scale: 1.2}}
                     class="ri-delete-bin-6-line"
