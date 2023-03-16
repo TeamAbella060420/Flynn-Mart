@@ -19,3 +19,8 @@
 .auth__form p{
     margin-top: 30px;
 }
+
+.auth__form input[type = 'file'] {
+    color: #fff;
+    cursor: pointer;
+}
