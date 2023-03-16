@@ -18,7 +18,7 @@ const Cart = () => {
                 <CommonSection title='Shopping Cart'/>
                 <Container>
                     <Row>
-                        <Col lg='9'>
+                        <Col lg='9' className="mt-5">
                             {
                                 cartItems.length === 0 ? <h2 className="fs-4 text-center">No item added to the cart.</h2> :
                                 <table className="table bordered">
@@ -42,18 +42,19 @@ const Cart = () => {
                             }
                         </Col>
 
-                        <Col lg='3'>
+                        <Col lg='3' className="mt-5 mb-5">
                             <div>
                                 <h6 className="d-flex align-items-center
-                                 justify-content-between">Subtotal</h6>
-                                <span>$ {totalAmount}</span>
-                                <p>Taxes and shipping fee will be calculated in checkout.</p>
+                                 justify-content-between">Subtotal
+                                <span className="fs-4 fw-bold">$ {totalAmount}</span>
+                                 </h6>
+                                <p className="fs-6 mt-2">Taxes and shipping fee will be calculated in checkout.</p>
                             </div>
                             <div>
-                                <button className="buy__btn"><Link to='/shop'>Continue Shopping</Link></button>
+                                <button className="buy__btn w-100"><Link to='/checkout'>Checkout</Link></button>
                             </div>
                             <div>
-                                <button className="buy__btn"><Link to='/checkout'>Checkout</Link></button>
+                                <button className="buy__btn w-100"><Link to='/shop'>Continue Shopping</Link></button>
                             </div>
                         </Col>
                     </Row>
