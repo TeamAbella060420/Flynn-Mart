@@ -1,11 +1,12 @@
 import React from "react";
-import { Col, Container, Row, Link } from "reactstrap";
+import { Col, Container, Row } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import '../styles/cart.css';
 import { motion } from "framer-motion";
 import { cartActions } from "../redux/slices/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
 
@@ -43,12 +44,16 @@ const Cart = () => {
 
                         <Col lg='3'>
                             <div>
-                                <h6>Subtotal</h6>
+                                <h6 className="d-flex align-items-center
+                                 justify-content-between">Subtotal</h6>
                                 <span>$ {totalAmount}</span>
                                 <p>Taxes and shipping fee will be calculated in checkout.</p>
                             </div>
                             <div>
                                 <button className="buy__btn"><Link to='/shop'>Continue Shopping</Link></button>
+                            </div>
+                            <div>
+                                <button className="buy__btn"><Link to='/checkout'>Checkout</Link></button>
                             </div>
                         </Col>
                     </Row>
