@@ -13,7 +13,9 @@ const Checkout = () => {
                         <Col lg='8'>
                             <h6 className="mb-4 fw-bold">Billing Information</h6>
                             <Form>
-                                <FormGroup className="form__group"></FormGroup>
+                                <FormGroup className="form__group">
+                                    <input type="text" />
+                                </FormGroup>
                             </Form>
                         </Col>
                         <Col lg='4'>
