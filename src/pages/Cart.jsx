@@ -33,15 +33,7 @@ const Cart = () => {
                                 <tbody>
                                     {
                                         cartItems.map((item,index) => (
-                                            <tr key={index}>
-                                            <td><img src={item.imgUrl} alt="" /></td>
-                                            <td>{item.productName}</td>
-                                            <td>${item.price}</td>
-                                            <td>{item.quantity} pc </td>
-                                            <td><motion.i
-                                             whileTap={{scale: 1.2}}
-                                             class="ri-delete-bin-6-line"></motion.i></td>
-                                        </tr>
+                                            <Tr item={item}/>
                                         ))
                                     }
                                 </tbody>
@@ -56,11 +48,22 @@ const Cart = () => {
                 </Container>
             </Helmet>
         </>
-    )
+    );
 };
 
-const Tr = () => {
-
+const Tr = ({item, index}) => {
+    return (
+        <tr key={index}>
+            <td><img src={item.imgUrl} alt="" /></td>
+            <td>{item.productName}</td>
+            <td>${item.price}</td>
+            <td>{item.quantity} pc </td>
+            <td><motion.i
+                whileTap={{scale: 1.2}}
+                class="ri-delete-bin-6-line"></motion.i>
+            </td>
+        </tr>
+    )
 }
 
 export default Cart;
