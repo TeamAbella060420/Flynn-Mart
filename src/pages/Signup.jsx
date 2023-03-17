@@ -28,10 +28,13 @@ const Login = () => {
                 auth,
                 email,
                 password);
+
+            const storageRef = ref(storage, `images${Date.now() + username}`)
+
             const user = userCredential.user
             console.log(user);
         } catch (error) {
-            console.log('error yan boy');
+            toast.error('Something went wrong');
         }
     }
     return (
