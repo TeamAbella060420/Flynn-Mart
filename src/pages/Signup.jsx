@@ -12,6 +12,7 @@ import { db } from "../firebase.config";
 import { toast } from 'react-toastify'
 
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage'
+import { async } from "@firebase/util";
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -29,10 +30,32 @@ const Login = () => {
                 email,
                 password);
 
-            const storageRef = ref(storage, `images${Date.now() + username}`)
-            const uploadTask = uploadBytesResumable(storageRef)
-
             const user = userCredential.user
+
+            const storageRef = ref(storage, `images${Date.now() + username}`)
+            const uploadTask = uploadBytesResumable(storageRef, file)
+
+            uploadTask.on((error) => {
+                toast.error(error.message)
+            }, () => {
+                getDownloadURL(uploadTask.snapshot.ref).then(async(downloadURL) => {
+                    await updateProfile(user, {
+
+                        // update user profile
+                        displayName: username,
+                        photoURL: downloadURL,
+                    });
+
+                        // store user data in firestore database
+                        await setDoc(doc(db, 'users', user.uid, {
+                            uid: user.uid,
+                            displayName: username,
+                            email,
+                            photoURL: downloadURL,
+                        }))
+                });
+            });
+
             console.log(user);
         } catch (error) {
             toast.error('Something went wrong');
