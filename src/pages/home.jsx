@@ -105,10 +105,11 @@ const Home = () => {
                                 <h3 className="text-white fs-6 mb-3">Quality Armchair</h3>
                             </div>
                             <Clock />
-
+                            <div className="clock__top-content">
                             <motion.button whileTap={{ scale: 1.2 }} className="buy__btn store__btn">
                                 <Link to='/shop'>Visit Store</Link>
                             </motion.button>
+                            </div>
                         </Col>
                         <Col lg='6' md='12' className="text-end counter__img">
                             <img src={counterImg} alt="" />
