@@ -30,6 +30,7 @@ const Login = () => {
                 password);
 
             const storageRef = ref(storage, `images${Date.now() + username}`)
+            const uploadTask = uploadBytesResumable(storageRef)
 
             const user = userCredential.user
             console.log(user);
