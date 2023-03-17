@@ -90,11 +90,6 @@
         text-align: center !important;
         display: inline-block !important;
     }
-
-    .store__btn {
-        text-align: center !important;
-        display: inline-block !important;
-    }
 }
 
 @media only screen and (max-width: 768px) {
