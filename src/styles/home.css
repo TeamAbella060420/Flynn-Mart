@@ -86,9 +86,14 @@
         font-size: 1rem !important;
     }
 
-    .count__down-col {
-        text-align: center;
-        display: inline-block;
+    .count__down-col h4{
+        text-align: center !important;
+        display: inline-block !important;
+    }
+
+    .store__btn {
+        text-align: center !important;
+        display: inline-block !important;
     }
 }
 
@@ -107,6 +112,11 @@
 
     .section__title {
         font-size: 1.4rem;
+    }
+
+    .clock__top-content h4{
+        text-align: center !important;
+        display: inline-block;
     }
 }
 
