@@ -10,6 +10,9 @@ import { NavLink, useNavigate, Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 import { useSelector } from "react-redux";
 import useAuth from '../../custom-hooks/useAuth'
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase.config";
+import { toast } from "react-toastify";
 
 const nav__links = [
     {
@@ -44,6 +47,14 @@ const Header = () => {
             } else {
                 headerRef.current.classList.remove('sticky__header')
             }
+        })
+    }
+
+    const logout = () => {
+        signOut(auth).then(() => {
+            toast.success('Logged out')
+        }).catch(err => {
+            toast.error('Logged out fail')
         })
     }
 
@@ -102,19 +113,19 @@ const Header = () => {
                                 </span>
                                 <div className="profile">
                                     <motion.img
-                                        onClick={toggleProfileAction}
                                         whileTap={{ scale: 1.2}}
                                         src={ currentUser ? currentUser.photoURL : userIcon}
                                         alt=""
+                                        onClick={toggleProfileAction}
                                     />
                                     <div
                                         className="profile__actions"
-                                        onClick={toggleProfileAction}
                                         ref={profileActionRef}
+                                        onClick={toggleProfileAction}
                                     >
                                         {
                                             currentUser ?
-                                            <span>Logout</span> :
+                                            <span onClick={logout}>Logout</span> :
                                             <div>
                                                 <Link to='/signup'>Signup</Link>
                                                 <Link to='/login'>Login</Link>
