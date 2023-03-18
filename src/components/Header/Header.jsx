@@ -103,8 +103,8 @@ const Header = () => {
                                         currentUser ?
                                         <span>Logout</span> :
                                         <div>
-                                            <Link to='/signup'>Logout</Link>
                                             <Link to='/signup'>Signup</Link>
+                                            <Link to='/login'>Login</Link>
                                         </div>
                                     }
                                     </div>
