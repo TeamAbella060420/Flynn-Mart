@@ -34,6 +34,7 @@ const Header = () => {
 
     const menuRef = useRef(null);
     const navigate = useNavigate();
+    const { currentUser } = useAuth();
 
     const stickyHeaderFunc = () => {
         window.addEventListener('scroll', () => {
@@ -96,7 +97,7 @@ const Header = () => {
                                     <span className="badge">{totalQuantity}</span>
                                 </span>
                                 <span>
-                                    <motion.img whileTap={{ scale: 1.2}} src={userIcon} alt="" />
+                                    <motion.img whileTap={{ scale: 1.2}} src={ currentUser ? currentUser.photoURL : userIcon} alt="" />
                                 </span>
                                 <div className="mobile__menu">
                                     <span onClick={menuToggle}>
