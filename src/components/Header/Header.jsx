@@ -100,7 +100,12 @@ const Header = () => {
                                     <motion.img whileTap={{ scale: 1.2}} src={ currentUser ? currentUser.photoURL : userIcon} alt="" />
                                     <div className="profile__actions">
                                     {
-                                        currentUser ? <span>Logout</span> : <div><Link to='/signup'>Logout</Link><Link to='/signup'>Signup</Link></div>
+                                        currentUser ?
+                                        <span>Logout</span> :
+                                        <div>
+                                            <Link to='/signup'>Logout</Link>
+                                            <Link to='/signup'>Signup</Link>
+                                        </div>
                                     }
                                     </div>
                                 </div>
@@ -118,3 +123,4 @@ const Header = () => {
 };
 
 export default Header;
+
