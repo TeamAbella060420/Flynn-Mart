@@ -31,6 +31,7 @@ const Header = () => {
 
     const headerRef = useRef(null);
     const totalQuantity = useSelector(state => state.cart.totalQuantity)
+    const profileActionRef = useRef(null)
 
     const menuRef = useRef(null);
     const navigate = useNavigate();
@@ -56,7 +57,9 @@ const Header = () => {
 
     const navigateToCart = () => {
         navigate('/cart')
-    }
+    };
+
+    
 
     return (
         <header className="header" ref={headerRef}>
