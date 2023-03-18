@@ -109,17 +109,17 @@ const Header = () => {
                                     />
                                     <div
                                         className="profile__actions"
-                                        ref={profileActionRef}
                                         onClick={toggleProfileAction}
+                                        ref={profileActionRef}
                                     >
-                                    {
-                                        currentUser ?
-                                        <span>Logout</span> :
-                                        <div>
-                                            <Link to='/signup'>Signup</Link>
-                                            <Link to='/login'>Login</Link>
-                                        </div>
-                                    }
+                                        {
+                                            currentUser ?
+                                            <span>Logout</span> :
+                                            <div>
+                                                <Link to='/signup'>Signup</Link>
+                                                <Link to='/login'>Login</Link>
+                                            </div>
+                                        }
                                     </div>
                                 </div>
                                 <div className="mobile__menu">
