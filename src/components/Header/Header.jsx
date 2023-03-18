@@ -34,7 +34,7 @@ const Header = () => {
 
     const headerRef = useRef(null);
     const totalQuantity = useSelector(state => state.cart.totalQuantity)
-    const profileActionRef = useRef(null);
+    const profileActionRef = useRef(document.querySelector(".show__profileActions"));
 
     const menuRef = useRef(null);
     const navigate = useNavigate();
@@ -65,13 +65,19 @@ const Header = () => {
         return () => window.removeEventListener('scroll', stickyHeaderFunc)
     })
 
-    const menuToggle = () => menuRef.current.classList.toggle('active__menu')
+    const menuToggle = () => {
+        console.log(menuRef, 'menuRef');
+        menuRef.current.classList.toggle('active__menu')
+    }
 
     const navigateToCart = () => {
         navigate('/cart')
     };
 
-    const toggleProfileAction = () => profileActionRef.current.classList.toggle('show__profileActions')
+    const toggleProfileActions = () => {
+        console.log(profileActionRef, 'profileActionRef');
+        profileActionRef.current.classList.toggle('show__profileActions');
+      }
 
     return (
         <header className="header" ref={headerRef}>
@@ -112,23 +118,20 @@ const Header = () => {
                                     <span className="badge">{totalQuantity}</span>
                                 </span>
                                 <div className="profile">
-                                    <span>
                                     <motion.img
                                         whileTap={{ scale: 1.2}}
                                         src={ currentUser ? currentUser.photoURL: userIcon }
                                         alt=""
-                                        onClick={toggleProfileAction}
-                                    />
-                                    </span>
+                                        onClick={toggleProfileActions}
+                                        />
                                     <div
-                                        className="profile__actions"
-                                        ref={profileActionRef}
-                                        onClick={toggleProfileAction}
+                                          className="profile__actions"
+                                          onClick={toggleProfileActions}
+                                          ref={profileActionRef}
                                     >
                                         {
                                             currentUser ?
-                                            <span onClick={logout}>Logout</span> :
-                                            <div>
+                                            <span onClick={logout}>Logout</span> : <div>
                                                 <Link to='/signup'>Signup</Link>
                                                 <Link to='/login'>Login</Link>
                                             </div>
