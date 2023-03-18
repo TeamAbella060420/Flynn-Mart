@@ -53,6 +53,7 @@ const Header = () => {
     const logout = () => {
         signOut(auth).then(() => {
             toast.success('Logged out')
+            navigate('/home')
         }).catch(err => {
             toast.error('Logged out fail')
         })
@@ -72,7 +73,6 @@ const Header = () => {
 
     const toggleProfileAction = () => profileActionRef.current.classList.toggle('show__profileActions')
 
-    console.log(profileActionRef, 'sss');
     return (
         <header className="header" ref={headerRef}>
             <Container>
@@ -114,7 +114,7 @@ const Header = () => {
                                 <div className="profile">
                                     <motion.img
                                         whileTap={{ scale: 1.2}}
-                                        src={ currentUser ? currentUser.photoURL : userIcon}
+                                        src={ currentUser ? currentUser.photoURL : userIcon }
                                         alt=""
                                         onClick={toggleProfileAction}
                                     />
