@@ -34,7 +34,7 @@ const Header = () => {
 
     const headerRef = useRef(null);
     const totalQuantity = useSelector(state => state.cart.totalQuantity)
-    const profileActionRef = useRef(document.querySelector(".show__profileActions"));
+    const profileActionRef = useRef(null);
 
     const menuRef = useRef(null);
     const navigate = useNavigate();
@@ -61,7 +61,6 @@ const Header = () => {
 
     useEffect(() => {
         stickyHeaderFunc()
-
         return () => window.removeEventListener('scroll', stickyHeaderFunc)
     })
 
@@ -125,7 +124,7 @@ const Header = () => {
                                         onClick={toggleProfileActions}
                                         />
                                     <div
-                                          className="profile__actions"
+                                          className='profile__actions'
                                           onClick={toggleProfileActions}
                                           ref={profileActionRef}
                                     >
