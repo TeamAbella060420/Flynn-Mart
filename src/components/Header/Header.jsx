@@ -31,7 +31,7 @@ const Header = () => {
 
     const headerRef = useRef(null);
     const totalQuantity = useSelector(state => state.cart.totalQuantity)
-    const profileActionRef = useRef(null)
+    const profileActionRef = useRef(null);
 
     const menuRef = useRef(null);
     const navigate = useNavigate();
