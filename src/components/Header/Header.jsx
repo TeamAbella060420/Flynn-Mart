@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import './header.css'
 import { Container, Row } from "reactstrap";
 
@@ -112,12 +112,14 @@ const Header = () => {
                                     <span className="badge">{totalQuantity}</span>
                                 </span>
                                 <div className="profile">
+                                    <span>
                                     <motion.img
                                         whileTap={{ scale: 1.2}}
-                                        src={ currentUser ? currentUser.photoURL : userIcon }
+                                        src={ currentUser ? currentUser.photoURL: userIcon }
                                         alt=""
                                         onClick={toggleProfileAction}
                                     />
+                                    </span>
                                     <div
                                         className="profile__actions"
                                         ref={profileActionRef}
