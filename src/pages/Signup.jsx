@@ -12,7 +12,6 @@ import { db } from "../firebase.config";
 import { toast } from 'react-toastify'
 
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage'
-import { async } from "@firebase/util";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
