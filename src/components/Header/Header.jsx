@@ -59,10 +59,9 @@ const Header = () => {
         navigate('/cart')
     };
 
-    const toggleProfileAction = () => {
-        profileActionRef.current.classList.toggle('show__profileActions')
-    }
+    const toggleProfileAction = () => profileActionRef.current.classList.toggle('show__profileActions')
 
+    console.log(profileActionRef, 'sss');
     return (
         <header className="header" ref={headerRef}>
             <Container>
