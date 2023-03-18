@@ -59,7 +59,9 @@ const Header = () => {
         navigate('/cart')
     };
 
-    
+    const toggleProfileAction = () => {
+        profileActionRef.current.classList.toggle('show__profileActions')
+    }
 
     return (
         <header className="header" ref={headerRef}>
@@ -101,7 +103,7 @@ const Header = () => {
                                 </span>
                                 <div className="profile">
                                     <motion.img whileTap={{ scale: 1.2}} src={ currentUser ? currentUser.photoURL : userIcon} alt="" />
-                                    <div className="profile__actions">
+                                    <div className="profile__actions" ref={toggleProfileAction}>
                                     {
                                         currentUser ?
                                         <span>Logout</span> :
