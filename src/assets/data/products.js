@@ -277,10 +277,10 @@ const products = [
   },
   {
     id: "25",
-    productName: "Sakarias Armchair",
+    productName: "Pablo's Armchair",
     imgUrl: productImg10,
     category: "chair",
-    price: 99,
+    price: 101,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
