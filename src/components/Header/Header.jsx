@@ -102,7 +102,12 @@ const Header = () => {
                                     <span className="badge">{totalQuantity}</span>
                                 </span>
                                 <div className="profile">
-                                    <motion.img whileTap={{ scale: 1.2}} src={ currentUser ? currentUser.photoURL : userIcon} alt="" />
+                                    <motion.img
+                                        onClick={toggleProfileAction}
+                                        whileTap={{ scale: 1.2}}
+                                        src={ currentUser ? currentUser.photoURL : userIcon}
+                                        alt=""
+                                    />
                                     <div
                                         className="profile__actions"
                                         ref={profileActionRef}
