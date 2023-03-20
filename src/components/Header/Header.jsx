@@ -1,3 +1,18 @@
+import { useEffect, useRef } from "react"; // import hooks from React library
+import './header.css' // import styles
+import { Container, Row } from "reactstrap"; // import components from Reactstrap library
+
+import logo from '../../assets/images/eco-logo.png' // import image assets
+import userIcon from '../../assets/images/user-icon.png'
+
+import { NavLink, useNavigate, Link } from "react-router-dom"; // import routing hooks
+import { motion } from 'framer-motion'; // import animation effects from Framer Motion library
+import { useSelector } from "react-redux"; // import state management tool (used in Redux)
+import useAuth from '../../custom-hooks/useAuth' // import custom auth hook
+import { signOut } from "firebase/auth"; // import authentication tool (used in Firebase)
+import { auth } from "../../firebase.config";
+import { toast } from "react-toastify"; // import notification tool from react-toastify
+
 const Header = () => { // create Header component function
 
     const headerRef = useRef(null); // create reference object for sticky navbar feature
