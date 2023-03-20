@@ -54,7 +54,7 @@ const AdminNav = () => {
         </div>
     </header>
 
-    <section className="admin__menu">
+    <section className="admin__menu p-0">
         <Container>
             <Row>
                 <div className="admin__navigation">
