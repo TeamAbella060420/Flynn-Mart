@@ -4,6 +4,25 @@ import { Container, Row } from 'reactstrap';
 import useAuth from '../../custom-hooks/useAuth';
 import '../../styles/admin-nav.css'
 
+const admin__nav = [
+    {
+        display: 'Dashboard',
+        path: '/dashboard'
+    },
+    {
+        display: 'All-Products',
+        path: '/dashboard/all-products'
+    },
+    {
+        display: 'Orders',
+        path: '/dashboard/order'
+    },
+    {
+        display: 'Dashboard',
+        path: '/dashboard'
+    },
+]
+
 const AdminNav = () => {
 
     const { currentUser } = useAuth();
