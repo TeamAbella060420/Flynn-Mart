@@ -13,6 +13,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import AddProducts from "../components/Admin/AddProducts";
 import AllProducts from "../components/Admin/AllProducts";
 import Dashboard from "../components/Admin/Dashboard";
+import AdminNav from "../components/Admin/AdminNav";
 
 
 const Routers = () => {
