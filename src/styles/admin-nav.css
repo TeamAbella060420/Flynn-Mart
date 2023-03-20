@@ -45,3 +45,9 @@
     font-size: 1.5rem;
     color: whitesmoke;
 }
+
+.admin__menu {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
