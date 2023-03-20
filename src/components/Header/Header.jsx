@@ -13,6 +13,22 @@ import { signOut } from "firebase/auth"; // import authentication tool (used in 
 import { auth } from "../../firebase.config";
 import { toast } from "react-toastify"; // import notification tool from react-toastify
 
+// configuration for navigation links
+const nav__links = [
+    {
+        path: 'home',
+        display: 'Home'
+    },
+    {
+        path: 'shop',
+        display: 'Shop'
+    },
+    {
+        path: 'cart',
+        display: 'Cart'
+    },
+]
+
 const Header = () => { // create Header component function
 
     const headerRef = useRef(null); // create reference object for sticky navbar feature
