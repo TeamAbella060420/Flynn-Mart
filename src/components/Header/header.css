@@ -101,19 +101,7 @@
 }
 
 .show__profileActions {
-    position: absolute;
-    top: 98%;
-    left: 0;
-    width: 150px;
-    z-index: 10;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background: var(--card-bg-01);
-    line-height: 30px;
     display: block;
-    cursor: pointer;
 }
 
 .nav__icons .profile {
