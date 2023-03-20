@@ -4,6 +4,8 @@ import { Container, Row } from 'reactstrap';
 import useAuth from '../../custom-hooks/useAuth';
 import '../../styles/admin-nav.css'
 
+import { NavLink } from 'react-router-dom';
+
 const admin__nav = [
     {
         display: 'Dashboard',
@@ -18,8 +20,8 @@ const admin__nav = [
         path: '/dashboard/order'
     },
     {
-        display: 'Dashboard',
-        path: '/dashboard'
+        display: 'Users',
+        path: '/dashboard/users'
     },
 ]
 
@@ -56,7 +58,15 @@ const AdminNav = () => {
         <Container>
             <Row>
                 <div className="admin__navigation">
-
+                    <ul className="admin__menu-list">
+                        {
+                            admin__nav.map((item, index) => (
+                              <li className="admin__menu-item" key={index}>
+                                 <NavLink to={item.path}>{item.display}</NavLink>
+                              </li>
+                            ))
+                        }
+                    </ul>
                 </div>
             </Row>
         </Container>
