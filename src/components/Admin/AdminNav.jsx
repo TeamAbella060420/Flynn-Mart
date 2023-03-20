@@ -1,14 +1,15 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import Header from '../Header/Header';
+import { Container } from 'reactstrap';
 
 import useAuth from '../../custom-hooks/useAuth';
+import '../../styles/admin-nav.css'
 
 const AdminNav = () => {
 
     const { currentUser } = useAuth();
 
   return (
+    <header className='admin__header'>
         <div className="admin__nav-top">
             <Container>
                 <div className='admin__nav-wrapper-top'>
@@ -29,6 +30,7 @@ const AdminNav = () => {
                 </div >
             </Container>
         </div>
+    </header>
   )
 }
 
