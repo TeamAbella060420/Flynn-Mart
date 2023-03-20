@@ -26,8 +26,7 @@ const Routers = () => {
             <Route path="/*" element={<ProtectedRoute/>}>
                 <Route path="checkout" element={<Checkout />}/>
                 <Route path="dashboard/all-products" element={<AllProducts />}/>
-                <Route path="dashboard/all-products" element={<AllProducts />}/>
-                <Route path="dashboard/all-products" element={<AllProducts />}/>
+                <Route path="dashboard/add-products" element={<AddProducts />}/>
             </Route>
             {/* <Route
                 path="checkout"
