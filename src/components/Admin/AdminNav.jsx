@@ -2,7 +2,12 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Header from '../Header/Header';
 
+import useAuth from '../../custom-hooks/useAuth';
+
 const AdminNav = () => {
+
+    const { currentUser } = useAuth();
+
   return (
     <Header className='admin__header'>
         <div className="admin__nav-top">
@@ -14,7 +19,13 @@ const AdminNav = () => {
 
                     <div className="search__box">
                         <input type="text" placeholder='Search....'/>
-                        <span></span>
+                        <span><i class="ri-search-line"></i></span>
+                    </div>
+
+                    <div className="admin__nav-top-to-right">
+                        <span><i class="ri-notification-3-line"></i></span>
+                        <span><i class="ri-settings-2-line"></i></span>
+                        <img src={currentUser.photoURL} alt="" />
                     </div>
                 </div >
             </Container>
