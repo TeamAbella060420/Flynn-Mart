@@ -3,6 +3,7 @@
 .admin__header {
     width: 100%;
     background: var(--primary-color);
+    padding: 20px 0px;
 }
 
 .admin__nav-top {
@@ -13,11 +14,23 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    column-gap: 2rem;
+    column-gap: 3rem;
 }
 
 .admin__nav-top-right img {
     width: 40px;
     height: 40px;
     border-radius: 50px;
+}
+
+.admin__nav-top-right {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.admin__nav-wrapper-top .search__box {
+    display: flex;
+    align-items: center;
+    justify-content: start;
 }
