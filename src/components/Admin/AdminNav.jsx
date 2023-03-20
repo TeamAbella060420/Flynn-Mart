@@ -9,7 +9,6 @@ const AdminNav = () => {
     const { currentUser } = useAuth();
 
   return (
-    <Header className='admin__header'>
         <div className="admin__nav-top">
             <Container>
                 <div className='admin__nav-wrapper-top'>
@@ -30,7 +29,6 @@ const AdminNav = () => {
                 </div >
             </Container>
         </div>
-    </Header>
   )
 }
 
