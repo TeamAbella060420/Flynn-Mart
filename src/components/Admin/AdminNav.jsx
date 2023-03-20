@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from 'reactstrap';
+import { Container, Row } from 'reactstrap';
 
 import useAuth from '../../custom-hooks/useAuth';
 import '../../styles/admin-nav.css'
@@ -32,8 +32,18 @@ const AdminNav = () => {
             </Container>
         </div>
     </header>
+
+    <section className="admin__menu">
+        <Container>
+            <Row>
+                <div className="admin__navigation">
+
+                </div>
+            </Row>
+        </Container>
+    </section>
     </>
   )
 }
 
-export default AdminNav
+export default AdminNav;
