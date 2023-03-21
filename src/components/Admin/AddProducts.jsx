@@ -65,7 +65,7 @@ const AddProducts = () => {
               <div>
                 <FormGroup className="form__group">
                   <span>Product Image</span>
-                  <input type="file" required value={enterProductImg} onChange={e => setEnterProductImg(e.target.files[1])}/>
+                  <input type="file" required value={enterProductImg} onChange={e => setEnterProductImg(e.target.files(0))}/>
                 </FormGroup>
               </div>
 
