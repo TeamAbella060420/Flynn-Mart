@@ -7,7 +7,7 @@ const AddProducts = () => {
       <Container>
         <Row>
           <Col lg='12'>
-            <h4>Add Product</h4>
+            <h4 className='mb-5'>Add Product</h4>
             <Form>
               <FormGroup className="form__group">
                 <span>Product title</span>
@@ -22,14 +22,14 @@ const AddProducts = () => {
                 <input type="text" placeholder='Description....'/>
               </FormGroup>
 
-              <div>
-                <FormGroup className="form__group">
+              <div className='d-flex align-items-center justify-content-between gap-5'>
+                <FormGroup className="form__group w-50">
                   <span>Price</span>
                   <input type="number" placeholder='$100'/>
                 </FormGroup>
-                <FormGroup className="form__group">
+                <FormGroup className="form__group w-50">
                   <span>Category</span>
-                  <select>
+                  <select className='w-100 p-2'>
                     <option value="chair">Chair</option>
                     <option value="sofa">Sofa</option>
                     <option value="mobile">Mobile</option>
