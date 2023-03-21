@@ -30,7 +30,8 @@ const Login = () => {
             const userCredential = await createUserWithEmailAndPassword(
                 auth,
                 email,
-                password);
+                password
+            );
 
             const user = userCredential.user
 
@@ -88,7 +89,7 @@ const Login = () => {
                                 <input type="password" placeholder="Enter your password" value={password} onChange={e => setPassword(e.target.value)}/>
                             </FormGroup>
                             <FormGroup className="form__group">
-                                <input type="file" value={file} onChange={e => setFile(e.target.files(0))}/>
+                                <input type="file" value={file} onChange={e => setFile(e.target.files(0))} required/>
                             </FormGroup>
 
                             <button type="submit" className="auth__btn buy__btn">Create an Account</button>
