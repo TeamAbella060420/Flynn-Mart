@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Form, FormGroup } from 'reactstrap';
 
 const AddProducts = () => {
+
+  const [enterTitle, setEnterTitle] = useState('');
+  const [enterShortDesc, setEnterShortDesc] = useState('');
+  const [enterShortDescription, setEnterShortDescription] = useState('');
+  const [enterCategory, setEnterCategory] = useState('');
+  const [enterEnterPrice, setEnterEnterPrice] = useState('');
+  const [enterProductImg, setEnterProductImg] = useState(null);
+
   return (
     <section>
       <Container>
@@ -11,21 +19,21 @@ const AddProducts = () => {
             <Form>
               <FormGroup className="form__group">
                 <span>Product title</span>
-                <input type="text" placeholder='Double Sofa'/>
+                <input type="text" placeholder='Double Sofa' value={enterTitle} onChange={ e => e.target.value}/>
               </FormGroup>
               <FormGroup className="form__group">
                 <span>Short Description</span>
-                <input type="text" placeholder='lorem....'/>
+                <input type="text" placeholder='lorem....' value={enterTitle} onChange={ e => e.target.value}/>
               </FormGroup>
               <FormGroup className="form__group">
                 <span>Description</span>
-                <input type="text" placeholder='Description....'/>
+                <input type="text" placeholder='Description....' />
               </FormGroup>
 
               <div className='d-flex align-items-center justify-content-between gap-5'>
                 <FormGroup className="form__group w-50">
                   <span>Price</span>
-                  <input type="number" placeholder='$100'/>
+                  <input type="number" placeholder='$100' />
                 </FormGroup>
                 <FormGroup className="form__group w-50">
                   <span>Category</span>
@@ -42,11 +50,11 @@ const AddProducts = () => {
               <div>
                 <FormGroup className="form__group">
                   <span>Product Image</span>
-                  <input type="file"/>
+                  <input type="file" />
                 </FormGroup>
               </div>
 
-              <button className="primary__btn"></button>
+              <button className="buy__btn">Add Product</button>
             </Form>
           </Col>
         </Row>
