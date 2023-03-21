@@ -63,3 +63,10 @@
     justify-content: center;
     column-gap: 2.7rem;
 }
+
+.admin__menu-item .admin__menu-list a{
+    color: var(--primary-color);
+    font-weight: 500;
+    background: whitesmoke;
+    padding: 7px 10px;
+}
