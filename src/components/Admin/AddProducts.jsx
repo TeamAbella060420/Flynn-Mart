@@ -45,6 +45,8 @@ const AddProducts = () => {
                   <input type="file"/>
                 </FormGroup>
               </div>
+
+              <button className="primary__btn"></button>
             </Form>
           </Col>
         </Row>
