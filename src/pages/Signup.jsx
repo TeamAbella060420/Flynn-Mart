@@ -59,6 +59,11 @@ const Login = () => {
                 });
             });
 
+            console.log(uploadTask, 'sss');
+            console.log(userCredential, 'aaa');
+            console.log(user, 'qqq');
+
+
             setLoading(false)
             toast.success('Account created')
             navigate('/login')
