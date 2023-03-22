@@ -93,9 +93,9 @@ const Login = () => {
                             <FormGroup className="form__group">
                                 <input type="password" placeholder="Enter your password" value={password} onChange={e => setPassword(e.target.value)}/>
                             </FormGroup>
-                            <FormGroup className="form__group">
+                            {/* <FormGroup className="form__group">
                                 <input type="file" value={file} onChange={e => setFile(e.target.files[0])} required/>
-                            </FormGroup>
+                            </FormGroup> */}
 
                             <button type="submit" className="auth__btn buy__btn">Create an Account</button>
                             <p>Already have an account? {''}<Link to='/login'>Login</Link></p>
